@@ -61,7 +61,7 @@ function generatePassword() {
   if (needNumChar === false) {
     alert("Must select at least one character type");
   }
-  //
+  //Array of concat to calls to an empty variable.
   if (needLowCase) {
     passSelector = passSelector.concat(lowerCase);
   }
