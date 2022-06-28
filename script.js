@@ -61,7 +61,7 @@ function generatePassword() {
   if (needNumChar === false) {
     alert("Must select at least one character type");
   }
-
+ // concating the arrays to the passSelector variable. 
   if (needLowCase) {
     passSelector = passSelector.concat(lowerCase);
   }
@@ -74,6 +74,9 @@ function generatePassword() {
   if (needNumChar) {
     passSelector = passSelector.concat(numChar);
     console.log(passSelector);
+    
+    //generating a randomSelector as it pulls the array and creating a loop of iteration.
+    
   }
   for (var i = 0; i < lengthSelector; ++i) {
     var randomSelector = passSelector.charAt(
