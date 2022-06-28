@@ -1,67 +1,13 @@
 // Get references to the #generate element.
 var generateBtn = document.querySelector("#generate");
 
-var upperCase = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
+var upperCase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 // Declared variable that holds an array of values lowercase.
-var lowerCase = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
+var lowerCase = ["abcdefghijklmnopqrstuvwxyz"];
 // Declared variable that holds an array of values special characters.
-var spChar = ["!", "#", "$", "%", "&", "*", "+", "<", "=", ">", "?", "@"];
+var spChar = ["!#$%&*+<=>?@"];
 
-var numChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var numChar = ["0123456789"];
 
 function generatePassword() {
   var passSelector = "";
@@ -115,6 +61,7 @@ function generatePassword() {
   if (needNumChar === false) {
     alert("Must select at least one character type");
   }
+  //
   if (needLowCase) {
     passSelector = passSelector.concat(lowerCase);
   }
@@ -126,6 +73,7 @@ function generatePassword() {
   }
   if (needNumChar) {
     passSelector = passSelector.concat(numChar);
+    console.log(passSelector);
   }
   for (var i = 0; i < lengthSelector; ++i) {
     var randomSelector = passSelector.charAt(
